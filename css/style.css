@@ -1,0 +1,412 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 40px 15px;
+  margin: 0 auto;
+}
+
+.table_thead {
+  --bs-table-bg: #8fb9ea38;
+  ;
+}
+
+th .fio {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: rgb(228, 226, 226);
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  margin-bottom: 10px;
+
+}
+
+
+
+.glass-btn {
+  border-radius: 25px;
+  position: relative;
+  width: 220px;
+  height: 50px;
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+.glass-btn span {
+  color: rgb 254, 254, 34;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  padding: 0 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  color: #e69090;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+}
+
+.glass-btn:hover span {
+  letter-spacing: 3px;
+}
+
+.glass-btn span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translate(0);
+  transition: 0.5s;
+  filter: blur(0px);
+}
+
+.glass-btn:hover span:before {
+  transform: skewX(45deg) translate(200px);
+}
+
+.glass-btn span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transition: 0.5s;
+  border-radius: 30px;
+  z-index: -1;
+}
+
+.glass-btn:hover span:after {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glass-btn:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+
+.glass-btn:hover:before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+.glass-btn:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+
+.glass-btn:hover:after {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+.glass-btn.glass-btn-red span:after,
+.glass-btn.glass-btn-red:before,
+.glass-btn.glass-btn-red:after {
+  background: #ff4747;
+  box-shadow: 0 0 5px #ff4747, 0 0 15px #ff4747, 0 0 30px #ff4747, 0 0 60px #ff4747;
+}
+
+.glass-btn.glass-btn-blue span:after,
+.glass-btn.glass-btn-blue:before,
+.glass-btn.glass-btn-blue:after {
+  background: #419cec;
+  box-shadow: 0 0 5px #419cec, 0 0 15px #419cec, 0 0 30px #419cec, 0 0 60px #419cec;
+}
+
+.glass-btn.glass-btn-green span:after,
+.glass-btn.glass-btn-green:before,
+.glass-btn.glass-btn-green:after {
+  background: #38ba35;
+  box-shadow: 0 0 5px #38ba35, 0 0 15px #38ba35, 0 0 30px #38ba35, 0 0 60px #38ba35;
+}
+
+.glass-btn {
+  position: relative;
+  width: 220px;
+  height: 50px;
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+.glass-btn span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  padding: 0 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  color: #0a4d1c;
+  ;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+}
+
+.glass-btn:hover span {
+  letter-spacing: 3px;
+}
+
+.glass-btn span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translate(0);
+  transition: 0.5s;
+  filter: blur(0px);
+}
+
+.glass-btn:hover span:before {
+  transform: skewX(45deg) translate(200px);
+}
+
+.glass-btn span:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transition: 0.5s;
+  border-radius: 30px;
+  z-index: -1;
+}
+
+.glass-btn:hover span:after {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glass-btn:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+
+.glass-btn:hover:before {
+  bottom: 0;
+  height: 80%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+.glass-btn.glass-btn-red span:after,
+.glass-btn.glass-btn-red:before {
+  background: #ff4747;
+  box-shadow: 0 0 5px #ff4747, 0 0 15px #ff4747, 0 0 30px #ff4747, 0 0 60px #ff4747;
+}
+
+.glass-btn.glass-btn-blue span:after,
+.glass-btn.glass-btn-blue:before {
+  background: #419cec;
+  box-shadow: 0 0 5px #419cec, 0 0 15px #419cec, 0 0 30px #419cec, 0 0 60px #419cec;
+}
+
+.glass-btn.glass-btn-green span:after,
+.glass-btn.glass-btn-green:before {
+  background: #38ba35;
+  box-shadow: 0 0 5px #38ba35, 0 0 15px #38ba35, 0 0 30px #38ba35, 0 0 60px #38ba35;
+}
+
+td {
+  text-align: center;
+}
+
+/* убрать стрелку у кнопки */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+
+}
+
+
+
+/* .custom-btn {
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+.btn-4 {
+  background-color: #4dccc6;
+  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.btn-4:hover {
+  background-color: #89d8d3;
+  background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+}
+
+.btn-4 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-4:before,
+.btn-4:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .9),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .9),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  transition: all 0.3s ease;
+}
+
+.btn-4:before {
+  height: 0%;
+  width: .1px;
+}
+
+.btn-4:after {
+  width: 0%;
+  height: .1px;
+}
+
+.btn-4:hover:before {
+  height: 100%;
+}
+
+.btn-4:hover:after {
+  width: 100%;
+}
+
+.btn-4 span:before,
+.btn-4 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .9),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .9),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  transition: all 0.3s ease;
+}
+
+.btn-4 span:before {
+  width: .1px;
+  height: 0%;
+}
+
+.btn-4 span:after {
+  width: 0%;
+  height: .1px;
+}
+
+.btn-4 span:hover:before {
+  height: 100%;
+}
+
+.btn-4 span:hover:after {
+  width: 100%;
+} */
